@@ -1,6 +1,6 @@
 # Adyen CLI
 
-This example generates Go client packages for every versioned Adyen OpenAPI spec in `adyen-openapi`, excluding the notification specs, and provides a generic CLI for listing and calling them.
+This example generates Go client packages for every versioned Adyen OpenAPI spec in `adyen-openapi`, excluding the notification specs, and provides a generic CLI for listing and send API requests.
 
 ## Generate
 
@@ -22,7 +22,7 @@ cd src/
 go run ./adyen-cli request --spec ./adyen-openapi/json/CheckoutService-v72 --method POST --path /payments --api-key "$ADYEN_API_KEY" --body '{"amount":{"currency":"USD","value":1000},"reference":"Your order number","paymentMethod":{"type":"scheme","number":"4111111111111111","expiryMonth":"03","expiryYear":"2030","holderName":"John Smith","cvc":"737"},"returnUrl":"https://your-company.example.com/...","merchantAccount":"$ADYEN_MERCHANT_ACCOUNT"}'
 ```
 
-If you export `ADYEN_API_KEY`, you can omit `--api-key` entirely. To pass it explicitly from the shell, use:
+If you export `ADYEN_API_KEY`, you can use `--api-key`. To pass it from shell, use this instead:
 
 ```sh
 cd src/
