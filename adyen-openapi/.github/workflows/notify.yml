@@ -1,0 +1,21 @@
+name: Notify libraries
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read  
+  
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.ADYEN_AUTOMATION_BOT_ACCESS_TOKEN }}
+    steps:
+      - name: SDK Automation
+        run: gh workflow run gradle.yml -R Adyen/adyen-sdk-automation
+      - name: Postman 
+        run: gh workflow run trigger-postman.yml -R Adyen/adyen-postman
