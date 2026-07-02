@@ -1,0 +1,18 @@
+lint:
+	$(GOBIN)/golangci-lint run ./...
+
+lint-ci:
+	$(GOBIN)/golangci-lint run ./... --output.text.path=stdout --timeout=5m
+
+.PHONY: generate
+generate:
+	go generate ./...
+
+test:
+	go test -cover ./...
+
+tidy:
+	go mod tidy
+
+tidy-ci:
+	tidied -verbose

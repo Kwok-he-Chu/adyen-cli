@@ -1,0 +1,9 @@
+package: checkoutservicev49
+output: /workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v49/client.gen.go
+generate:
+  client: true
+  models: true
+output-options:
+  skip-prune: true
+  prefer-skip-optional-pointer: true
+  response-type-suffix: Resp

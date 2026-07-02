@@ -1,0 +1,599 @@
+{
+  "services": [
+    {
+      "name": "A2APaymentsService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/A2APaymentsService-v1.yaml",
+      "package": "a2apaymentsservicev1",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/a2aissuer-api/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/a2-a-payments-service-v1"
+    },
+    {
+      "name": "AccountService-v3.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/AccountService-v3.yaml",
+      "package": "accountservicev3",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Account/v3",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/account-service-v3"
+    },
+    {
+      "name": "AccountService-v4.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/AccountService-v4.yaml",
+      "package": "accountservicev4",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Account/v4",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/account-service-v4"
+    },
+    {
+      "name": "AccountService-v5.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/AccountService-v5.yaml",
+      "package": "accountservicev5",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Account/v5",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/account-service-v5"
+    },
+    {
+      "name": "AccountService-v6.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/AccountService-v6.yaml",
+      "package": "accountservicev6",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Account/v6",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/account-service-v6"
+    },
+    {
+      "name": "BalanceControlService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BalanceControlService-v1.yaml",
+      "package": "balancecontrolservicev1",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/BalanceControl/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/balance-control-service-v1"
+    },
+    {
+      "name": "BalanceControlService-v2.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BalanceControlService-v2.yaml",
+      "package": "balancecontrolservicev2",
+      "baseURL": "https://balance-control-test.adyen.com/balance-control/api/v2",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/balance-control-service-v2"
+    },
+    {
+      "name": "BinLookupService-v40.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BinLookupService-v40.yaml",
+      "package": "binlookupservicev40",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/BinLookup/v40",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/bin-lookup-service-v40"
+    },
+    {
+      "name": "BinLookupService-v50.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BinLookupService-v50.yaml",
+      "package": "binlookupservicev50",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/BinLookup/v50",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/bin-lookup-service-v50"
+    },
+    {
+      "name": "BinLookupService-v52.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BinLookupService-v52.yaml",
+      "package": "binlookupservicev52",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/BinLookup/v52",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/bin-lookup-service-v52"
+    },
+    {
+      "name": "BinLookupService-v53.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BinLookupService-v53.yaml",
+      "package": "binlookupservicev53",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/BinLookup/v53",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/bin-lookup-service-v53"
+    },
+    {
+      "name": "BinLookupService-v54.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/BinLookupService-v54.yaml",
+      "package": "binlookupservicev54",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/BinLookup/v54",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/bin-lookup-service-v54"
+    },
+    {
+      "name": "CapitalService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CapitalService-v1.yaml",
+      "package": "capitalservicev1",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/capital/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/capital-service-v1"
+    },
+    {
+      "name": "CheckoutService-v37.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v37.yaml",
+      "package": "checkoutservicev37",
+      "baseURL": "https://checkout-test.adyen.com/v37",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v37"
+    },
+    {
+      "name": "CheckoutService-v40.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v40.yaml",
+      "package": "checkoutservicev40",
+      "baseURL": "https://checkout-test.adyen.com/v40",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v40"
+    },
+    {
+      "name": "CheckoutService-v41.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v41.yaml",
+      "package": "checkoutservicev41",
+      "baseURL": "https://checkout-test.adyen.com/v41",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v41"
+    },
+    {
+      "name": "CheckoutService-v46.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v46.yaml",
+      "package": "checkoutservicev46",
+      "baseURL": "https://checkout-test.adyen.com/v46",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v46"
+    },
+    {
+      "name": "CheckoutService-v49.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v49.yaml",
+      "package": "checkoutservicev49",
+      "baseURL": "https://checkout-test.adyen.com/v49",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v49"
+    },
+    {
+      "name": "CheckoutService-v50.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v50.yaml",
+      "package": "checkoutservicev50",
+      "baseURL": "https://checkout-test.adyen.com/v50",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v50"
+    },
+    {
+      "name": "CheckoutService-v51.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v51.yaml",
+      "package": "checkoutservicev51",
+      "baseURL": "https://checkout-test.adyen.com/v51",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v51"
+    },
+    {
+      "name": "CheckoutService-v52.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v52.yaml",
+      "package": "checkoutservicev52",
+      "baseURL": "https://checkout-test.adyen.com/v52",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v52"
+    },
+    {
+      "name": "CheckoutService-v53.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v53.yaml",
+      "package": "checkoutservicev53",
+      "baseURL": "https://checkout-test.adyen.com/v53",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v53"
+    },
+    {
+      "name": "CheckoutService-v64.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v64.yaml",
+      "package": "checkoutservicev64",
+      "baseURL": "https://checkout-test.adyen.com/v64",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v64"
+    },
+    {
+      "name": "CheckoutService-v65.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v65.yaml",
+      "package": "checkoutservicev65",
+      "baseURL": "https://checkout-test.adyen.com/v65",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v65"
+    },
+    {
+      "name": "CheckoutService-v66.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v66.yaml",
+      "package": "checkoutservicev66",
+      "baseURL": "https://checkout-test.adyen.com/v66",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v66"
+    },
+    {
+      "name": "CheckoutService-v67.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v67.yaml",
+      "package": "checkoutservicev67",
+      "baseURL": "https://checkout-test.adyen.com/v67",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v67"
+    },
+    {
+      "name": "CheckoutService-v68.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v68.yaml",
+      "package": "checkoutservicev68",
+      "baseURL": "https://checkout-test.adyen.com/v68",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v68"
+    },
+    {
+      "name": "CheckoutService-v69.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v69.yaml",
+      "package": "checkoutservicev69",
+      "baseURL": "https://checkout-test.adyen.com/v69",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v69"
+    },
+    {
+      "name": "CheckoutService-v70.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v70.yaml",
+      "package": "checkoutservicev70",
+      "baseURL": "https://checkout-test.adyen.com/v70",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v70"
+    },
+    {
+      "name": "CheckoutService-v71.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v71.yaml",
+      "package": "checkoutservicev71",
+      "baseURL": "https://checkout-test.adyen.com/v71",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v71"
+    },
+    {
+      "name": "CheckoutService-v72.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CheckoutService-v72.yaml",
+      "package": "checkoutservicev72",
+      "baseURL": "https://checkout-test.adyen.com/v72",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v72"
+    },
+    {
+      "name": "CloudDeviceService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/CloudDeviceService-v1.yaml",
+      "package": "clouddeviceservicev1",
+      "baseURL": "https://device-api-test.adyen.com/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/cloud-device-service-v1"
+    },
+    {
+      "name": "DataProtectionService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/DataProtectionService-v1.yaml",
+      "package": "dataprotectionservicev1",
+      "baseURL": "https://ca-test.adyen.com/ca/services/DataProtectionService/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/data-protection-service-v1"
+    },
+    {
+      "name": "DisputeService-v30.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/DisputeService-v30.yaml",
+      "package": "disputeservicev30",
+      "baseURL": "https://ca-test.adyen.com/ca/services/DisputeService/v30",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/dispute-service-v30"
+    },
+    {
+      "name": "ForeignExchangeService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/ForeignExchangeService-v1.yaml",
+      "package": "foreignexchangeservicev1",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/fx/api/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/foreign-exchange-service-v1"
+    },
+    {
+      "name": "FundService-v3.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/FundService-v3.yaml",
+      "package": "fundservicev3",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Fund/v3",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/fund-service-v3"
+    },
+    {
+      "name": "FundService-v5.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/FundService-v5.yaml",
+      "package": "fundservicev5",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Fund/v5",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/fund-service-v5"
+    },
+    {
+      "name": "FundService-v6.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/FundService-v6.yaml",
+      "package": "fundservicev6",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Fund/v6",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/fund-service-v6"
+    },
+    {
+      "name": "HopService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/HopService-v1.yaml",
+      "package": "hopservicev1",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Hop/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/hop-service-v1"
+    },
+    {
+      "name": "HopService-v5.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/HopService-v5.yaml",
+      "package": "hopservicev5",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Hop/v5",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/hop-service-v5"
+    },
+    {
+      "name": "HopService-v6.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/HopService-v6.yaml",
+      "package": "hopservicev6",
+      "baseURL": "https://cal-test.adyen.com/cal/services/Hop/v6",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/hop-service-v6"
+    },
+    {
+      "name": "LegalEntityService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/LegalEntityService-v1.yaml",
+      "package": "legalentityservicev1",
+      "baseURL": "https://kyc-test.adyen.com/lem/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/legal-entity-service-v1"
+    },
+    {
+      "name": "LegalEntityService-v2.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/LegalEntityService-v2.yaml",
+      "package": "legalentityservicev2",
+      "baseURL": "https://kyc-test.adyen.com/lem/v2",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/legal-entity-service-v2"
+    },
+    {
+      "name": "LegalEntityService-v3.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/LegalEntityService-v3.yaml",
+      "package": "legalentityservicev3",
+      "baseURL": "https://kyc-test.adyen.com/lem/v3",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/legal-entity-service-v3"
+    },
+    {
+      "name": "LegalEntityService-v4.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/LegalEntityService-v4.yaml",
+      "package": "legalentityservicev4",
+      "baseURL": "https://kyc-test.adyen.com/lem/v4",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/legal-entity-service-v4"
+    },
+    {
+      "name": "ManagementService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/ManagementService-v1.yaml",
+      "package": "managementservicev1",
+      "baseURL": "https://management-test.adyen.com/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/management-service-v1"
+    },
+    {
+      "name": "ManagementService-v3.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/ManagementService-v3.yaml",
+      "package": "managementservicev3",
+      "baseURL": "https://management-test.adyen.com/v3",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/management-service-v3"
+    },
+    {
+      "name": "OpenBankingService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/OpenBankingService-v1.yaml",
+      "package": "openbankingservicev1",
+      "baseURL": "https://obgateway-test.adyen.com/obgateway/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/open-banking-service-v1"
+    },
+    {
+      "name": "PaymentService-v25.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v25.yaml",
+      "package": "paymentservicev25",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v25",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v25"
+    },
+    {
+      "name": "PaymentService-v30.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v30.yaml",
+      "package": "paymentservicev30",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v30",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v30"
+    },
+    {
+      "name": "PaymentService-v40.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v40.yaml",
+      "package": "paymentservicev40",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v40",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v40"
+    },
+    {
+      "name": "PaymentService-v46.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v46.yaml",
+      "package": "paymentservicev46",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v46",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v46"
+    },
+    {
+      "name": "PaymentService-v49.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v49.yaml",
+      "package": "paymentservicev49",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v49",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v49"
+    },
+    {
+      "name": "PaymentService-v50.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v50.yaml",
+      "package": "paymentservicev50",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v50",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v50"
+    },
+    {
+      "name": "PaymentService-v51.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v51.yaml",
+      "package": "paymentservicev51",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v51",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v51"
+    },
+    {
+      "name": "PaymentService-v52.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v52.yaml",
+      "package": "paymentservicev52",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v52",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v52"
+    },
+    {
+      "name": "PaymentService-v64.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v64.yaml",
+      "package": "paymentservicev64",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v64",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v64"
+    },
+    {
+      "name": "PaymentService-v67.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v67.yaml",
+      "package": "paymentservicev67",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v67",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v67"
+    },
+    {
+      "name": "PaymentService-v68.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentService-v68.yaml",
+      "package": "paymentservicev68",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payment/v68",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payment-service-v68"
+    },
+    {
+      "name": "PaymentsAppService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PaymentsAppService-v1.yaml",
+      "package": "paymentsappservicev1",
+      "baseURL": "https://management-live.adyen.com/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payments-app-service-v1"
+    },
+    {
+      "name": "PayoutService-v30.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v30.yaml",
+      "package": "payoutservicev30",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v30",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v30"
+    },
+    {
+      "name": "PayoutService-v40.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v40.yaml",
+      "package": "payoutservicev40",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v40",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v40"
+    },
+    {
+      "name": "PayoutService-v50.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v50.yaml",
+      "package": "payoutservicev50",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v50",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v50"
+    },
+    {
+      "name": "PayoutService-v51.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v51.yaml",
+      "package": "payoutservicev51",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v51",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v51"
+    },
+    {
+      "name": "PayoutService-v52.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v52.yaml",
+      "package": "payoutservicev52",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v52",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v52"
+    },
+    {
+      "name": "PayoutService-v64.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v64.yaml",
+      "package": "payoutservicev64",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v64",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v64"
+    },
+    {
+      "name": "PayoutService-v67.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v67.yaml",
+      "package": "payoutservicev67",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v67",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v67"
+    },
+    {
+      "name": "PayoutService-v68.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/PayoutService-v68.yaml",
+      "package": "payoutservicev68",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Payout/v68",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v68"
+    },
+    {
+      "name": "RecurringService-v25.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/RecurringService-v25.yaml",
+      "package": "recurringservicev25",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Recurring/v25",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v25"
+    },
+    {
+      "name": "RecurringService-v30.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/RecurringService-v30.yaml",
+      "package": "recurringservicev30",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Recurring/v30",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v30"
+    },
+    {
+      "name": "RecurringService-v40.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/RecurringService-v40.yaml",
+      "package": "recurringservicev40",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Recurring/v40",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v40"
+    },
+    {
+      "name": "RecurringService-v49.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/RecurringService-v49.yaml",
+      "package": "recurringservicev49",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Recurring/v49",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v49"
+    },
+    {
+      "name": "RecurringService-v67.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/RecurringService-v67.yaml",
+      "package": "recurringservicev67",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Recurring/v67",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v67"
+    },
+    {
+      "name": "RecurringService-v68.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/RecurringService-v68.yaml",
+      "package": "recurringservicev68",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/Recurring/v68",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v68"
+    },
+    {
+      "name": "SessionAuthenticationService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/SessionAuthenticationService-v1.yaml",
+      "package": "sessionauthenticationservicev1",
+      "baseURL": "https://test.adyen.com/authe/api/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/session-authentication-service-v1"
+    },
+    {
+      "name": "SessionService-v68.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/SessionService-v68.yaml",
+      "package": "sessionservicev68",
+      "baseURL": "https://checkout-test.adyen.com/checkout/possdk/v68",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/session-service-v68"
+    },
+    {
+      "name": "SoftPOSConfigurationService-v3.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/SoftPOSConfigurationService-v3.yaml",
+      "package": "softposconfigurationservicev3",
+      "baseURL": "https://softposconfig-test.adyen.com/softposconfig/v3",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/soft-pos-configuration-service-v3"
+    },
+    {
+      "name": "StoredValueService-v46.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/StoredValueService-v46.yaml",
+      "package": "storedvalueservicev46",
+      "baseURL": "https://pal-test.adyen.com/pal/servlet/StoredValue/v46",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/stored-value-service-v46"
+    },
+    {
+      "name": "TerminalAPI-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TerminalAPI-v1.yaml",
+      "package": "terminalapiv1",
+      "baseURL": "https://device-api-test.adyen.com/v1/merchants/{merchantAccount}/devices/{deviceId}/sync",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/terminal-api-v1"
+    },
+    {
+      "name": "TestCardService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TestCardService-v1.yaml",
+      "package": "testcardservicev1",
+      "baseURL": "https://pal-test.adyen.com/pal/services/TestCard/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/test-card-service-v1"
+    },
+    {
+      "name": "TfmAPIService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TfmAPIService-v1.yaml",
+      "package": "tfmapiservicev1",
+      "baseURL": "https://postfmapi-test.adyen.com/postfmapi/terminal/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/tfm-api-service-v1"
+    },
+    {
+      "name": "TransferService-v1.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TransferService-v1.yaml",
+      "package": "transferservicev1",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/btl/v1",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/transfer-service-v1"
+    },
+    {
+      "name": "TransferService-v2.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TransferService-v2.yaml",
+      "package": "transferservicev2",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/btl/v2",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/transfer-service-v2"
+    },
+    {
+      "name": "TransferService-v3.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TransferService-v3.yaml",
+      "package": "transferservicev3",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/btl/v3",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/transfer-service-v3"
+    },
+    {
+      "name": "TransferService-v4.yaml",
+      "spec": "/workspaces/adyen-cli/adyen-openapi/yaml/TransferService-v4.yaml",
+      "package": "transferservicev4",
+      "baseURL": "https://balanceplatform-api-test.adyen.com/btl/v4",
+      "outDir": "/workspaces/adyen-cli/examples/adyen-cli/generated/transfer-service-v4"
+    }
+  ]
+}

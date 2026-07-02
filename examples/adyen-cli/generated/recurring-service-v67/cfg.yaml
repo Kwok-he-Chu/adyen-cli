@@ -1,0 +1,9 @@
+package: recurringservicev67
+output: /workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v67/client.gen.go
+generate:
+  client: true
+  models: true
+output-options:
+  skip-prune: true
+  prefer-skip-optional-pointer: true
+  response-type-suffix: Resp

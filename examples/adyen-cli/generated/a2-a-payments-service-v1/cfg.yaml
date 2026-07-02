@@ -1,0 +1,9 @@
+package: a2apaymentsservicev1
+output: /workspaces/adyen-cli/examples/adyen-cli/generated/a2-a-payments-service-v1/client.gen.go
+generate:
+  client: true
+  models: true
+output-options:
+  skip-prune: true
+  prefer-skip-optional-pointer: true
+  response-type-suffix: Resp

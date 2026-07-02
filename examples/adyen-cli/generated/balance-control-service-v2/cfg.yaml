@@ -1,0 +1,9 @@
+package: balancecontrolservicev2
+output: /workspaces/adyen-cli/examples/adyen-cli/generated/balance-control-service-v2/client.gen.go
+generate:
+  client: true
+  models: true
+output-options:
+  skip-prune: true
+  prefer-skip-optional-pointer: true
+  response-type-suffix: Resp
