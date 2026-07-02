@@ -1,5 +1,5 @@
 package: accountservicev5
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/account-service-v5/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/account-service-v5/client.gen.go
 generate:
   client: true
   models: true

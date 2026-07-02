@@ -1,5 +1,5 @@
 package: binlookupservicev50
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/bin-lookup-service-v50/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/bin-lookup-service-v50/client.gen.go
 generate:
   client: true
   models: true

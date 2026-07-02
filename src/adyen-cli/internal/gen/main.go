@@ -40,11 +40,11 @@ func main() {
 		panic(err)
 	}
 
-	examplesRoot := filepath.Join(repoRoot, "examples")
+	srcRoot := filepath.Join(repoRoot, "src")
 
 	specDir := filepath.Join(repoRoot, "adyen-openapi", "yaml")
-	outputRoot := filepath.Join(repoRoot, "examples", "adyen-cli", "generated")
-	manifestPath := filepath.Join(repoRoot, "examples", "adyen-cli", "manifest.json")
+	outputRoot := filepath.Join(repoRoot, "src", "adyen-cli", "generated")
+	manifestPath := filepath.Join(repoRoot, "src", "adyen-cli", "manifest.json")
 
 	if err := os.RemoveAll(outputRoot); err != nil {
 		panic(err)
@@ -72,7 +72,7 @@ func main() {
 		}
 
 		cmd := exec.Command("go", "run", "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen", "-config", cfgPath, cand.SpecPath)
-		cmd.Dir = examplesRoot
+		cmd.Dir = srcRoot
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		if err := cmd.Run(); err != nil {
@@ -83,7 +83,7 @@ func main() {
 		man.Services = append(man.Services, service{
 			Name:    cand.Name,
 			Spec:    cand.SpecPath,
-			Package: cand.Package,
+			Package: cand.Folder,
 			BaseURL: cand.BaseURL,
 			OutDir:  outDir,
 		})

@@ -1,5 +1,5 @@
 package: recurringservicev30
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/recurring-service-v30/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/recurring-service-v30/client.gen.go
 generate:
   client: true
   models: true

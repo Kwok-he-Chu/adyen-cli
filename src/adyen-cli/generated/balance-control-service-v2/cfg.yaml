@@ -1,5 +1,5 @@
 package: balancecontrolservicev2
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/balance-control-service-v2/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/balance-control-service-v2/client.gen.go
 generate:
   client: true
   models: true

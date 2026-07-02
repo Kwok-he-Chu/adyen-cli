@@ -1,5 +1,5 @@
 package: testcardservicev1
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/test-card-service-v1/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/test-card-service-v1/client.gen.go
 generate:
   client: true
   models: true

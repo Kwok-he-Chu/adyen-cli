@@ -1,5 +1,5 @@
 package: payoutservicev51
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/payout-service-v51/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/payout-service-v51/client.gen.go
 generate:
   client: true
   models: true

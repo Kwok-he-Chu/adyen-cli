@@ -1,5 +1,5 @@
 package: checkoutservicev69
-output: /workspaces/adyen-cli/examples/adyen-cli/generated/checkout-service-v69/client.gen.go
+output: /workspaces/adyen-cli/src/adyen-cli/generated/checkout-service-v69/client.gen.go
 generate:
   client: true
   models: true
