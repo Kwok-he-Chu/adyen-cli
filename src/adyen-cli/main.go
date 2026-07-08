@@ -229,7 +229,13 @@ func buildURL(baseURL, path string, queries []string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	resolved := base.ResolveReference(relative)
+	// ResolveReference replaces the entire path when the reference starts with "/",
+	// which would strip the version segment from the base URL (e.g. /v72).
+	// Instead, join the base path and the relative path explicitly.
+	resolved := *base
+	resolved.Path = strings.TrimRight(base.Path, "/") + "/" + strings.TrimLeft(relative.Path, "/")
+	resolved.RawQuery = relative.RawQuery
+	resolved.Fragment = relative.Fragment
 	params := resolved.Query()
 	for _, query := range queries {
 		key, value, ok := strings.Cut(query, "=")

@@ -226,8 +226,8 @@ cd src/
 
 go run ./adyen-cli setup-integration \
   --mgmt-api-key "$ADYEN_MGMT_API_KEY" \
-  --merchant-id  YourMerchantAccountID \
-  --webhook-url  https://your-tunnel.ngrok.io/api/webhook \
+  --merchant-id  AdyenAccount815ECOM \
+  --webhook-url  https://adyen.com \
   --origin       http://localhost:3000
 ```
 
