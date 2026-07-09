@@ -30,11 +30,11 @@ jobs:
         run: |
           mkdir -p dist
           cd src
-          GOOS=linux   GOARCH=amd64 go build -o ../dist/adyen-cli-linux-amd64 ./adyen-cli/...
-          GOOS=linux   GOARCH=arm64 go build -o ../dist/adyen-cli-linux-arm64 ./adyen-cli/...
-          GOOS=darwin  GOARCH=amd64 go build -o ../dist/adyen-cli-darwin-amd64 ./adyen-cli/...
-          GOOS=darwin  GOARCH=arm64 go build -o ../dist/adyen-cli-darwin-arm64 ./adyen-cli/...
-          GOOS=windows GOARCH=amd64 go build -o ../dist/adyen-cli-windows-amd64.exe ./adyen-cli/...
+          GOOS=linux   GOARCH=amd64 go build -o ../dist/adyen-cli-linux-amd64 ./adyen-cli
+          GOOS=linux   GOARCH=arm64 go build -o ../dist/adyen-cli-linux-arm64 ./adyen-cli
+          GOOS=darwin  GOARCH=amd64 go build -o ../dist/adyen-cli-darwin-amd64 ./adyen-cli
+          GOOS=darwin  GOARCH=arm64 go build -o ../dist/adyen-cli-darwin-arm64 ./adyen-cli
+          GOOS=windows GOARCH=amd64 go build -o ../dist/adyen-cli-windows-amd64.exe ./adyen-cli
 
       - name: Create and push tag
         env:
