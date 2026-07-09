@@ -282,10 +282,10 @@ func usage() {
 // On success it writes a ready-to-use .env block to --env-file (default: .env).
 func runSetupIntegration(args []string) error {
 	flags := flag.NewFlagSet("setup-integration", flag.ContinueOnError)
-	mgmtKey := flags.String("mgmt-api-key", os.Getenv("ADYEN_MGMT_API_KEY"), "Management API key")
-	merchantID := flags.String("merchant-id", "", "Merchant account ID")
+	mgmtKey := flags.String("management-api-key", os.Getenv("ADYEN_MANAGEMENT_API_KEY"), "Management API key")
+	merchantAccount := flags.String("merchant-account", "", "Merchant account ID")
 	webhookURL := flags.String("webhook-url", "", "Webhook endpoint URL (e.g. https://tunnel.ngrok.io/api/webhook)")
-	origin := flags.String("origin", "http://localhost:3000", "Allowed origin domain for the Drop-in SDK")
+	allowedOrigin := flags.String("allowed-origin", "http://localhost:3000", "Allowed origin domain for the Drop-in SDK")
 	baseURL := flags.String("base-url", "https://management-test.adyen.com/v3", "Management API base URL")
 	description := flags.String("description", "AgentX integration credential", "Credential description")
 	envFile := flags.String("env-file", ".env", "Path to the .env file to write credentials into")
@@ -295,10 +295,10 @@ func runSetupIntegration(args []string) error {
 		return err
 	}
 	if *mgmtKey == "" {
-		return errors.New("missing --mgmt-api-key (or set ADYEN_MGMT_API_KEY)")
+		return errors.New("missing --management-api-key (or set ADYEN_MANAGEMENT_API_KEY)")
 	}
-	if *merchantID == "" {
-		return errors.New("missing --merchant-id")
+	if *merchantAccount == "" {
+		return errors.New("missing --merchant-account")
 	}
 	if *webhookURL == "" {
 		return errors.New("missing --webhook-url")
@@ -365,7 +365,7 @@ func runSetupIntegration(args []string) error {
 		return err
 	}
 	credResp, err := call(http.MethodPost,
-		fmt.Sprintf("/merchants/%s/apiCredentials", *merchantID),
+		fmt.Sprintf("/merchants/%s/apiCredentials", *merchantAccount),
 		string(credBody))
 	if err != nil {
 		return fmt.Errorf("step 1 (create credential): %w", err)
@@ -384,7 +384,7 @@ func runSetupIntegration(args []string) error {
 	// ── Step 2: Generate client key ──────────────────────────────────────────
 	fmt.Fprintln(os.Stderr, "→ Step 2: Generating client key...")
 	ckResp, err := call(http.MethodPost,
-		fmt.Sprintf("/merchants/%s/apiCredentials/%s/generateClientKey", *merchantID, credentialID),
+		fmt.Sprintf("/merchants/%s/apiCredentials/%s/generateClientKey", *merchantAccount, credentialID),
 		"")
 	if err != nil {
 		return fmt.Errorf("step 2 (generate client key): %w", err)
@@ -396,13 +396,13 @@ func runSetupIntegration(args []string) error {
 	fmt.Fprintf(os.Stderr, "   clientKey: %s\n", clientKey)
 
 	// ── Step 3: Register allowed origin ──────────────────────────────────────
-	fmt.Fprintf(os.Stderr, "→ Step 3: Registering allowed origin %q...\n", *origin)
-	originBody, err := json.Marshal(map[string]string{"domain": *origin})
+	fmt.Fprintf(os.Stderr, "→ Step 3: Registering allowed origin %q...\n", *allowedOrigin)
+	originBody, err := json.Marshal(map[string]string{"domain": *allowedOrigin})
 	if err != nil {
 		return err
 	}
 	if _, err = call(http.MethodPost,
-		fmt.Sprintf("/merchants/%s/apiCredentials/%s/allowedOrigins", *merchantID, credentialID),
+		fmt.Sprintf("/merchants/%s/apiCredentials/%s/allowedOrigins", *merchantAccount, credentialID),
 		string(originBody)); err != nil {
 		return fmt.Errorf("step 3 (register origin): %w", err)
 	}
@@ -420,7 +420,7 @@ func runSetupIntegration(args []string) error {
 		return err
 	}
 	whResp, err := call(http.MethodPost,
-		fmt.Sprintf("/merchants/%s/webhooks", *merchantID),
+		fmt.Sprintf("/merchants/%s/webhooks", *merchantAccount),
 		string(whBody))
 	if err != nil {
 		return fmt.Errorf("step 4 (create webhook): %w", err)
@@ -435,7 +435,7 @@ func runSetupIntegration(args []string) error {
 	fmt.Fprintln(os.Stderr, "→ Step 5: Waiting 1 s then generating HMAC key...")
 	time.Sleep(1 * time.Second)
 	hmacResp, err := call(http.MethodPost,
-		fmt.Sprintf("/merchants/%s/webhooks/%s/generateHmac", *merchantID, webhookID),
+		fmt.Sprintf("/merchants/%s/webhooks/%s/generateHmac", *merchantAccount, webhookID),
 		"")
 	if err != nil {
 		return fmt.Errorf("step 5 (generate HMAC): %w", err)
@@ -449,7 +449,7 @@ func runSetupIntegration(args []string) error {
 	// ── Step 6: List configured payment methods ───────────────────────────────
 	fmt.Fprintln(os.Stderr, "→ Step 6: Listing configured payment methods...")
 	pmResp, err := call(http.MethodGet,
-		fmt.Sprintf("/merchants/%s/paymentMethodSettings", *merchantID),
+		fmt.Sprintf("/merchants/%s/paymentMethodSettings", *merchantAccount),
 		"")
 	if err != nil {
 		// Non-fatal: the "Payment methods read" role may not be on this key.
@@ -487,7 +487,7 @@ func runSetupIntegration(args []string) error {
 	// ── Write .env file ───────────────────────────────────────────────────────
 	envContent := fmt.Sprintf(
 		"ADYEN_API_KEY=%s\nADYEN_CLIENT_KEY=%s\nADYEN_HMAC_KEY=%s\nADYEN_MERCHANT_ACCOUNT=%s\n",
-		checkoutAPIKey, clientKey, hmacKey, *merchantID,
+		checkoutAPIKey, clientKey, hmacKey, *merchantAccount,
 	)
 	if err := os.WriteFile(*envFile, []byte(envContent), 0600); err != nil {
 		return fmt.Errorf("writing %s: %w", *envFile, err)
@@ -496,7 +496,7 @@ func runSetupIntegration(args []string) error {
 	fmt.Printf("ADYEN_API_KEY=%s\n", checkoutAPIKey[len(checkoutAPIKey)-4:])
 	fmt.Printf("ADYEN_CLIENT_KEY=%s\n", clientKey)
 	fmt.Printf("ADYEN_HMAC_KEY=%s\n", hmacKey[len(hmacKey)-4:])
-	fmt.Printf("ADYEN_MERCHANT_ACCOUNT=%s\n", *merchantID)
+	fmt.Printf("ADYEN_MERCHANT_ACCOUNT=%s\n", *merchantAccount)
 	fmt.Fprintf(os.Stderr, "Written credentials to %s\n", *envFile)
 	return nil
 }
