@@ -35,12 +35,11 @@ type candidate struct {
 var versionPattern = regexp.MustCompile(`^(.*)-v([0-9]+)\.yaml$`)
 
 func main() {
-	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
+	genModuleDir, err := filepath.Abs(".")
 	if err != nil {
 		panic(err)
 	}
-
-	srcRoot := filepath.Join(repoRoot, "src")
+	repoRoot := filepath.Join(genModuleDir, "..", "..", "..", "..")
 
 	specDir := filepath.Join(repoRoot, "adyen-openapi", "yaml")
 	outputRoot := filepath.Join(repoRoot, "src", "adyen-cli", "generated")
@@ -72,7 +71,7 @@ func main() {
 		}
 
 		cmd := exec.Command("go", "run", "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen", "-config", cfgPath, cand.SpecPath)
-		cmd.Dir = srcRoot
+		cmd.Dir = genModuleDir
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		if err := cmd.Run(); err != nil {

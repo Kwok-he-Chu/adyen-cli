@@ -1,3 +1,3 @@
 package main
 
-//go:generate go run ./internal/gen
+//go:generate sh -c "cd internal/gen && go run ."

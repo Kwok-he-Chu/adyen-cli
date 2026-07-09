@@ -7,9 +7,7 @@ This example generates Go client packages for every versioned Adyen OpenAPI spec
 ```sh
 go install github.com/deepmap/oapi-codegen/v2/cmd/oapi-codegen@v2.2.0
 
-cd src/
-
-go generate ./adyen-cli
+go generate ./src/adyen-cli 
 ```
 
 ## Run
