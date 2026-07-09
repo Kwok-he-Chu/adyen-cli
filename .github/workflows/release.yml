@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: src/go.mod
+          cache-dependency-path: src/go.sum
+
+      - name: Build binaries
+        run: |
+          cd src
+          GOOS=linux   GOARCH=amd64 go build -o ../dist/adyen-cli-linux-amd64   ./adyen-cli/...
+          GOOS=linux   GOARCH=arm64 go build -o ../dist/adyen-cli-linux-arm64   ./adyen-cli/...
+          GOOS=darwin  GOARCH=amd64 go build -o ../dist/adyen-cli-darwin-amd64  ./adyen-cli/...
+          GOOS=darwin  GOARCH=arm64 go build -o ../dist/adyen-cli-darwin-arm64  ./adyen-cli/...
+          GOOS=windows GOARCH=amd64 go build -o ../dist/adyen-cli-windows-amd64.exe ./adyen-cli/...
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            dist/adyen-cli-linux-amd64
+            dist/adyen-cli-linux-arm64
+            dist/adyen-cli-darwin-amd64
+            dist/adyen-cli-darwin-arm64
+            dist/adyen-cli-windows-amd64.exe
